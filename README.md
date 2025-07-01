@@ -1,40 +1,51 @@
-# 💬 Classificador de Sentimentos de Comentários
+# 💬 Sentiment Classifier for Comments (Portuguese)
 
-Este projeto utiliza **IA com NLP (TextBlob)** para analisar o sentimento de comentários/textos. Classifica a entrada como **Positivo**, **Negativo** ou **Neutro**, com interface interativa feita em **Streamlit**.
+This project uses **NLP with Hugging Face Transformers** (via `pysentimiento`) to analyze the sentiment of user-submitted comments in **Portuguese**. The input is a text string, and the output is classified as **Positive**, **Negative**, or **Neutral**.
 
-## 🔧 Tecnologias
+## 🔧 Technologies Used
 - Python
-- NLP com TextBlob
+- [pysentimiento](https://github.com/josecannete/pysentimiento)
+- Hugging Face Transformers
 - Streamlit
 
-## 🚀 Como executar
+## 🚀 How to Run
 
-1. Clone este repositório:
+1. Clone the repository:
 ```bash
-git clone https://github.com/seuusuario/sentiment-analyzer.git
+git clone https://github.com/youruser/sentiment-analyzer.git
 cd sentiment-analyzer
-```
+Install dependencies:
 
-2. Instale as dependências:
-```bash
+bash
+Copy
+Edit
 pip install -r requirements.txt
-python -m textblob.download_corpora
-```
+Run the Streamlit app:
 
-3. Execute o app:
-```bash
+bash
+Copy
+Edit
 streamlit run app.py
-```
+Note: The first run may take longer as the BERT model is downloaded.
 
-## 📌 Exemplo de uso
+✨ Example
+Input:
 
-Digite um texto como:
-> "O atendimento foi excelente!"
+"Eu odeio isso."
 
-E o app retorna:
-> Sentimento detectado: **Positivo**
+Output:
 
----
+Negative
 
-## 📄 Licença
+📁 Project Structure
+bash
+Copy
+Edit
+sentiment-analyzer/
+├── app.py                  # Streamlit app
+├── sentiment.py            # Sentiment analysis logic with Hugging Face
+├── requirements.txt        # Dependencies
+└── README.md               # Project documentation
+
+📄 License
 MIT
